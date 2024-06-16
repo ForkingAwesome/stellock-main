@@ -1,6 +1,6 @@
 #![no_std]
 
-use soroban_sdk::{contract, contractimpl, contracttype, symbol_short, Address, Env, Map, Symbol};
+use soroban_sdk::{contract, contractimpl, contracttype, symbol_short, Address, Env, Map, String};
 
 #[contract]
 pub struct NonTransferableNFT;
@@ -13,7 +13,7 @@ const COUNT: Symbol = symbol_short!("count");
 pub struct NFT {
     pub id: i128,
     pub owner: Address,
-    pub metadata: Symbol,
+    pub metadata: String,
 }
 
 #[contractimpl]
@@ -25,7 +25,7 @@ impl NonTransferableNFT {
         env.storage().persistent().set(&COUNT, &0i128);
     }
 
-    pub fn mint(env: Env, owner: Address, metadata: Symbol) {
+    pub fn mint(env: Env, owner: Address, metadata: String) {
         let nft_count: i128 = env.storage().persistent().get(&COUNT).unwrap_or(0);
 
         let new_nft = NFT {
