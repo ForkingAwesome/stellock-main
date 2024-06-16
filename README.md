@@ -8,6 +8,10 @@ Onboarding 6 million web2 users to web3.
 
 ---
 
+*Deployed Contract Addresses (Testnets):*
+
+- **Stellar:** `CB7DLRA6OIDK2LNXDTKFWDU5IQPKLMARMHK2CJIZ3CXAX2A4YTHPSQE6`
+
 **How to Use the Stellock App:**
 
 1. **Visit our website:** [https://www.stellock.vercel.app](https://www.stellock.vercel.app) - It's easier than navigating the Death Star.
@@ -21,20 +25,16 @@ Stellock is open-source under the MIT License:
 
 1. **Clone the repository:**
 
-    ```sh
-    git clone https://github.com/ForkingAwesome/stellock-main
-    ```
+   ```sh
+   git clone https://github.com/ForkingAwesome/stellock-main
+   ```
 
 2. **Set up your development environment:**
-    
-    - Install dependencies (refer to `.env.example` and `package.json`).
+
+   - Install dependencies (refer to `.env.example` and `package.json`).
 
 3. **Deploy contracts on the devnet:**
-    
-    *Deployed Contract Addresses (Testnets):*
 
-    - **Stellar:** `CB7DLRA6OIDK2LNXDTKFWDU5IQPKLMARMHK2CJIZ3CXAX2A4YTHPSQE6`
- 
 4. **Test and contribute! May the forks be with you!**
 
 ---
@@ -42,6 +42,7 @@ Stellock is open-source under the MIT License:
 ## **Tech stack used**
 
 Stellock was built with:
+
 - **Backend:** NextAuth, Prisma
 - **Frontend:** Next, TypeScript, Tailwind CSS, ShadcnUI, NextAuth
 - **Blockend:** Rust, Soroban, Stellar
