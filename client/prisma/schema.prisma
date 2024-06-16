@@ -26,6 +26,8 @@ model User {
   accounts              Account[]
   isTwoFactorEnabled    Boolean                @default(false)
   twoFactorConfirmation TwoFactorConfirmation?
+  publicKey             String?
+  privateKey            String?
 
   @@map("users")
 }
