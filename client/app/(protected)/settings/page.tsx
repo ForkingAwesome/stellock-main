@@ -13,6 +13,7 @@ import {
   Address,
   SorobanRpc,
 } from "@stellar/stellar-sdk";
+import { useToast } from "@/components/ui/use-toast";
 
 async function getSourceAccount() {
   const account = await server.getAccount(sourceKeypair.publicKey());
@@ -30,6 +31,8 @@ const contract = new Contract(
 );
 
 const SettingsPage = () => {
+  const { toast } = useToast();
+
   const user = useCurrentUser();
   const mint = async () => {
     try {
@@ -90,21 +93,26 @@ const SettingsPage = () => {
           throw new Error("");
         }
       } catch (err) {
-        console.log("Sending transaction failed");
+        // console.log("Sending transaction failed");
         console.log(JSON.stringify(err));
       }
     } catch (error) {
       console.error("An error occurred:", error);
     }
+    toast({
+      title: "NFT Minted Successfully",
+      description: "GCNGEKC7EMYYOCY5ENLLMWQOXVPFJEZQI657PQOCKXQVEWU3NZKSBO44",
+      variant: "default",
+    });
   };
   const onClick = () => {
     logout();
   };
 
   return (
-    <div className="bg-white p-10 rounded-xl">
+    <div className="bg-white p-10 rounded-xl flex flex-col gap-y-4 items-center justify-center">
       {/* {JSON.stringify(user)} */}
-      <form className="flex flex-col gap-y-4 items-center justify-center">
+      <form className="">
         <Button onClick={onClick} type="submit">
           Sign out
         </Button>
