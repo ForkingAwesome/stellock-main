@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { LoginButton } from "@/components/auth/login-button";
-import { cn } from "@/lib/utils";
 import { Poppins } from "next/font/google";
-import Image from "next/image";
-import logo from "@/public/logo.webp"
 import Hero from "./_landing/hero";
+import Features from "./_landing/features";
+import SDK from "./_landing/sdk";
+import Footer from "./_landing/footer";
+import Header from "./_landing/navbar";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -14,9 +13,11 @@ const font = Poppins({
 export default function Home() {
   return (
     <main className="">
+      <Header text="Stellock" />
       <Hero />
-      <div className="space-y-6 text-center flex justify-center flex-col items-center">
-      </div>
+      <Features />
+      <SDK />
+      <Footer />
     </main>
   );
 }

@@ -76,6 +76,14 @@ const config = {
         playfair: ['"Playfair Display"', "serif"],
         dmSans: ['"DM Sans"', "sans-serif"],
       },
+      backgroundImage: {
+        "radial-gradient-secure":
+          "radial-gradient(circle at top, #ffffff 0%, #FFEAEA 100%)",
+        "radial-gradient-personalised":
+          "radial-gradient(circle at top, #ffffff 0%, #FFF8E8 100%)",
+        "radial-gradient-effortless":
+          "radial-gradient(circle at top, #ffffff 0%, #F0EEFF 100%)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

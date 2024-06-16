@@ -8,7 +8,7 @@ interface ContentProps {
 
 const Content: React.FC<ContentProps> = ({ title, subtitle }) => {
   return (
-    <div className="flex flex-col gap-16 px-14">
+    <div className="md:w-[700px] flex flex-col gap-16 px-14">
       <div className="flex flex-col gap-1">
         <div className="text-[36px] md:text-[64px] leading-tight font-playfair font-medium">
           {title.split(" ").map((word, index) =>
