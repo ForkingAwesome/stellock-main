@@ -108,8 +108,8 @@ const SettingsPage = () => {
         <Button onClick={onClick} type="submit">
           Sign out
         </Button>
-        <Button onClick={() => mint()}>Mint</Button>
       </form>
+      <Button onClick={() => mint()}>Mint</Button>
     </div>
   );
 };
